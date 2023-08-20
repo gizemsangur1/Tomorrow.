@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { Grid, Typography } from "@mui/material";
 import axios from "axios";
-import Newscard from "@/components/newscard/Newscard";
 import Link from "next/link";
 
 const Post = () => {
@@ -28,7 +27,7 @@ const Post = () => {
   return (
     <Grid container className={styles.container} spacing={3}>
       {data.map((item) => (
-        <Grid item xs={4} key={item.id} className={styles.flipcard}>
+        <Grid item xs={12} sm={6} md={4} key={item.id} className={styles.flipcard}>
           <Link href={`/news/${item.id}`} key={item.id}>
             <Grid className={styles.flipcardinner}>
               <Grid className={styles.newscard}>

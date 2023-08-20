@@ -4,6 +4,8 @@
     margin: 10px;
     padding: 10px;
     border-radius: 26px;
+    justify-content: center;
+    align-items: center;
     /* background-image: url("architecture.jpg"); */
     background-size: cover;
 }
@@ -64,5 +66,6 @@
 }
 
 .title{
-    font-size: 24px;
+    font-size: 2vh;
+    font-weight: bold;
 }

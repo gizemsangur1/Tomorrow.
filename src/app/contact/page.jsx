@@ -4,10 +4,11 @@ import { Grid } from "@mui/material";
 const page = () => {
   return (
     <Grid container className={styles.container}>
-      <Grid item xs={3}></Grid>
-      <Grid item xs={6} className={styles.form}>
+      <Grid item sm={3}></Grid>
+      <Grid item sm={6} xs={12} className={styles.form}>
         <Grid container>
-          <Grid item xs={12}>
+        <Grid item xs={1.5}/>
+          <Grid item xs={9}>
             <form>
               <div className={styles.formgroup}>
                 <input
@@ -35,9 +36,10 @@ const page = () => {
               </div>
             </form>
           </Grid>
+          <Grid item xs={1.5}/>
         </Grid>
       </Grid>
-      <Grid item xs={3}></Grid>
+      <Grid item sm={3}></Grid>
     </Grid>
   );
 };

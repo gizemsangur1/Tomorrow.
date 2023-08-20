@@ -18,7 +18,9 @@ const Navbar = () => {
             </a>
           </Grid>
           <Grid item xs={4} sx={{ textAlign: "center" }}>
-            <a className={styles.navitems}>Our Teams</a>
+            <Link href="/team" className={styles.navitems}>
+              Our Team
+            </Link>
           </Grid>
           <Grid item xs={4} sx={{ textAlign: "end" }}>
             <Link href="/news" className={styles.navitems}>

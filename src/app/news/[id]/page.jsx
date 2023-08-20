@@ -49,7 +49,10 @@ const Post = async ({ params }) => {
 
   return (
     <Grid container className={styles.container} spacing={3}>
-      <Grid item xs={9} className={styles.item}>
+      <Grid item sm={12} md={3} className={styles.image} sx={{ display: { sm: "grid",xs:"grid", md: "none" }}}>
+        <img src={data.url} style={{ width: "40vh",borderRadius:"16px" }} />
+      </Grid>
+      <Grid item sm={12} md={9} className={styles.item}>
         <Typography className={styles.title}>{data.title}</Typography>
         <Grid className={styles.line}></Grid>
         <Grid className={styles.bodydiv}>
@@ -57,8 +60,8 @@ const Post = async ({ params }) => {
           <Typography className={styles.body}>{post.body}</Typography>
         </Grid>
       </Grid>
-      <Grid item xs={3}>
-        <img src={data.url} style={{ width: "300px",borderRadius:"16px" }} />
+      <Grid item sm={12} md={3} className={styles.image} sx={{ display: { sm: "none",xs:"none", md: "grid" }}}>
+        <img src={data.url} style={{ width: "40vh",borderRadius:"16px" }} />
       </Grid>
     </Grid>
   );
