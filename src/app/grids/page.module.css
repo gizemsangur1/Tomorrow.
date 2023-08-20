@@ -117,7 +117,7 @@
 
 .heading{
     color: white;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .heading3{
@@ -163,23 +163,23 @@
 .icon1{
     background-image: url("man.jpg");
     background-size: cover;
-    width: 35px;
-    height: 35px;
+    width:2vw;
+    height: 2vw;
     border-radius: 50%;
 }
 .icon2{
     background-image: url("man2.jpg");
     background-size: cover;
     background-color: white;
-    width: 35px;
-    height: 35px;
+    width: 2vw;
+    height: 2vw;
     border-radius: 50%;
 }
 .icon3{
     background-image: url("woman.jpg");
     background-size: cover;
     background-color: white;
-    width: 35px;
-    height: 35px;
+    width: 2vw;
+    height: 2vw;
     border-radius: 50%;
 }
