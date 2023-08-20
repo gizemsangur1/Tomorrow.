@@ -11,7 +11,7 @@ const Post = () => {
 
   useEffect(() => {
     const startId = 1; // Başlangıç ID
-    const endId = 20; // Bitiş ID
+    const endId = 12; // Bitiş ID
 
     axios
       .get(`https://jsonplaceholder.typicode.com/photos`)
@@ -42,7 +42,7 @@ const Post = () => {
                   backgroundSize: "cover",
                 }}
               ></Grid>
-            </Grid>
+            </Grid>{" "}
           </Link>
         </Grid>
       ))}

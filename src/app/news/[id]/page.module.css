@@ -10,10 +10,21 @@
 }
 
 .title{
-    font-size: 36px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .body{
     font-size: 24px;
+    text-align: start;
+}
+
+.line{
+    width: 100%;
+    border: 1px solid black;
+}
+
+.bodydiv{
+    padding: 10px;
+    margin: 10px;
 }

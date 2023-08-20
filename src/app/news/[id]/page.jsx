@@ -4,9 +4,12 @@ import Image from "next/image";
 import { Grid, Typography } from "@mui/material";
 async function getData(id) {
   try {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/photos/${id}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/photos/${id}`,
+      {
+        cache: "no-store",
+      }
+    );
     const data = await res.json(); // Parse the response JSON
     return data;
   } catch (error) {
@@ -15,17 +18,20 @@ async function getData(id) {
   }
 }
 async function getPost(id) {
-    try {
-      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+  try {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${id}`,
+      {
         cache: "no-store",
-      });
-      const post = await res.json(); // Parse the response JSON
-      return post;
-    } catch (error) {
-      console.error("Fetch error:", error);
-      return [];
-    }
+      }
+    );
+    const post = await res.json(); // Parse the response JSON
+    return post;
+  } catch (error) {
+    console.error("Fetch error:", error);
+    return [];
   }
+}
 
 const Post = async ({ params }) => {
   const data = await getData(params.id);
@@ -42,13 +48,17 @@ const Post = async ({ params }) => {
   }
 
   return (
-    <Grid container className={styles.container}>
-      <Grid item xs={9} className={styles.item} >
+    <Grid container className={styles.container} spacing={3}>
+      <Grid item xs={9} className={styles.item}>
         <Typography className={styles.title}>{data.title}</Typography>
-        <Typography className={styles.body}>{post.body}</Typography>
+        <Grid className={styles.line}></Grid>
+        <Grid className={styles.bodydiv}>
+          <Typography className={styles.body}>{post.body}</Typography>
+          <Typography className={styles.body}>{post.body}</Typography>
+        </Grid>
       </Grid>
       <Grid item xs={3}>
-        <img src={data.url} style={{width:"300px"}}/>
+        <img src={data.url} style={{ width: "300px",borderRadius:"16px" }} />
       </Grid>
     </Grid>
   );
