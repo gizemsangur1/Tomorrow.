@@ -35,7 +35,7 @@ const Parts = () => {
             <Grid item xs={6} sx={{ padding: "12px" }}>
               <Typography className={styles.heading}>What we do</Typography>
               <Typography sx={{ fontSize: "24px", color: "white" }}>
-                5 Service
+                6 Service
               </Typography>
               <Grid
                 sx={{ width: "90%", border: "1px solid white", height: 0 }}

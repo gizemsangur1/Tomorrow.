@@ -1,0 +1,69 @@
+.container{
+    width: 100%;
+    height: 100%;
+    border:1px solid black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 26px;
+    /* background-image: url("architecture.jpg"); */
+    background-size: cover;
+}
+.flipcard{
+    width: 20vh;
+    height: 40vh;
+    perspective: 1000px;
+    justify-content: center;
+    align-items: center;
+}
+.flipcardinner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipcard:hover .flipcardinner{
+    transform: rotateY(180deg);
+}
+
+.newscard, .newscardback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.newscard{
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0)
+      );
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      display: grid;
+      justify-content: center;
+      align-items: center;
+}
+
+.newscardback{
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    transform: rotateY(180deg);
+}
+
+.title{
+    font-size: 24px;
+}
