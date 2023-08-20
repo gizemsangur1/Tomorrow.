@@ -3,48 +3,7 @@
   height: 75vh;
 }
 
-.container1{
-    margin: 20px;
-}
-
-.titleitem {
-  align-items: end;
-  padding: 60px;
-}
-
-.titlediv {
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-weight: bold;
-  font-size: 7vh;
-}
-
-.image {
-  width: 150px;
-  height: 250px;
-  background-image: url(./woman.jpg);
-  background-size: cover;
-}
-
-.image1 {
-    width: 150px;
-    height: 250px;
-    background-image: url(./man2.jpg);
-    background-size: cover;
-  }
-  
-  .image2 {
-    width: 150px;
-    height: 250px;
-    background-image: url(./man.jpg);
-    background-size: cover;
-  }
-  
-
-.imagediv {
-  justify-content: start;
-  align-items: center;
+.line{
+    width: 100%;
+    border:1px solid black;
 }

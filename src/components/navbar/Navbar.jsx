@@ -19,7 +19,7 @@ const Navbar = () => {
           </Grid>
           <Grid item xs={4} sx={{ textAlign: "center" }}>
             <Link href="/team" className={styles.navitems}>
-              Our Team
+              Our Teams
             </Link>
           </Grid>
           <Grid item xs={4} sx={{ textAlign: "end" }}>
