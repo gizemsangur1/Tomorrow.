@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
+import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleClick = () => {
@@ -24,20 +25,23 @@ const Navbar = () => {
         }}
       >
         <Grid container sx={{ width: "100%" }}>
-          <Grid item xs={4}>
+          <Grid item xs={3}>
             <a href="/" className={styles.navitems}>
               About Us
             </a>
           </Grid>
-          <Grid item xs={4} sx={{ textAlign: "center" }}>
+          <Grid item xs={3} sx={{ textAlign: "center" }}>
             <Link href="/team" className={styles.navitems}>
               Our Teams
             </Link>
           </Grid>
-          <Grid item xs={4} sx={{ textAlign: "end" }}>
+          <Grid item xs={3} sx={{ textAlign: "center" }}>
             <Link href="/news" className={styles.navitems}>
               News
             </Link>
+          </Grid>
+          <Grid item xs={3}  sx={{ textAlign: "end" }}>
+            <DarkModeToggle/>
           </Grid>
         </Grid>
       </Grid>
@@ -80,16 +84,19 @@ const Navbar = () => {
             About Us
           </a>
         </Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <Link href="/team" className={styles.navitems2}>
             Our Teams
           </Link>
         </Grid>
-        <Grid xs={12}>
+        <Grid item xs={12}>
           <Link href="/news" className={styles.navitems2}>
             News
           </Link>
         </Grid>
+        <Grid item xs={12} >
+            <DarkModeToggle/>
+          </Grid>
       </Grid>
     </Grid>
   );
