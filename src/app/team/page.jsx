@@ -46,7 +46,7 @@ const Team = () => {
   return (
     <Grid container className={styles.container} >
       {teams.map((item) => (
-        <Grid container direction="row" spacing={3} >
+        <Grid container direction="row" spacing={3} key={item.id}>
           <Grid item md={2} sm={12}  sx={{display:"grid",justifyContent:{md:"start",sm:"center"},alignItems:"center",margin:{md:"0px",sm:"10px"}}}>
             <h1>{item.title} </h1>
             <Grid className={styles.line}></Grid>

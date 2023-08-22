@@ -1,3 +1,4 @@
+<h1 align="center">Tomorrow.</h1>
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -18,17 +19,49 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## :rocket: Technologies ##
 
-To learn more about Next.js, take a look at the following resources:
+The following tools were used in this project:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [React.js-18.2.0]
+- [next-13.4.18]
+- [mongoose-7.4.3]
+- [eslint-8.47.0]
+- [@mui/material-5.14.5]
+- [Axios-1.4.0]
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## PAGES
+
+### About Us Page 
+
+<img src="./aboutus.jpeg"/>
+<img src="./aboutusdark.png"/>
+
+### Our Teams
+
+<img src="./ourteams.jpeg">
+<img src="./ourteamsdark.png">
+
+On this page I used nested array to fetch the teams and team members.
+
+### News 
+
+<p>On this page, I obtained assistance from the jsonplaceholder website for titles, images, and news bodies. I used Axios to fetch the data. When you open the news page, you will see several boxes containing the news titles. Hovering over a news box will flip it and display the news image.
+
+<img src="./news.png">
+<img src="./news2.png">
+<img src="./newsinside.png">
+<img src="./newsinsidedark.png">
+
+### Contact
+
+<p>On the contact page, individuals who wish to get in touch with us can send messages through a form that is connected to MongoDB. I utilized Mongoose to establish a connection between the form and the database.
+
+<img src="./contact.png">
+<img src="./contactdark.png">
+
+
+<a href="#top">Back to top</a>
