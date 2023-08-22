@@ -1,12 +1,14 @@
 "use client"
 import { Grid } from "@mui/material";
 import { AiOutlineMail } from "react-icons/ai";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import DarkModeToggle from "../DarkModeToggle/DarkModeToggle";
+import { ThemeContext } from "@/context/ThemeContext";
 const Navbar = () => {
+  const { toggle,mode } = useContext(ThemeContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const handleClick = () => {
     setMenuOpen(!menuOpen);
@@ -40,7 +42,7 @@ const Navbar = () => {
               News
             </Link>
           </Grid>
-          <Grid item xs={3}  sx={{ textAlign: "end" }}>
+          <Grid item xs={3}  sx={{ justifyContent: "end",display:"center" }}>
             <DarkModeToggle/>
           </Grid>
         </Grid>
@@ -52,8 +54,8 @@ const Navbar = () => {
         sm={9}
         xs={9}
       >
-        <Grid sx={{ display: { md: "grid", sm: "none", xs: "none" } }}>
-          <Link href="/contact" className={styles.button}>
+        <Grid sx={{ display: { md: "grid", sm: "none", xs: "none" } }} >
+          <Link href="/contact" className={styles.button} style={mode==="light"? {border:"1px solid black"}:{border:"1px solid white"}}>
             <p style={{ margin: "10px" }}>Contact Us </p>
             <AiOutlineMail size="24px" />
           </Link>

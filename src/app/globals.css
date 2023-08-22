@@ -11,18 +11,16 @@ body {
  
 }
 
-/* .theme{
-  transition: 1s all ease;
-}
- */
 .light{
   background-color: white;
   color: black;
+  border-color: black;
 }
 
 .dark{
   background-color: black;
   color: white;
+  border-color: white;
 }
 
 a{

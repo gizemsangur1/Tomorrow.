@@ -10,7 +10,7 @@ async function getData(id) {
         cache: "no-store",
       }
     );
-    const data = await res.json(); // Parse the response JSON
+    const data = await res.json(); 
     return data;
   } catch (error) {
     console.error("Fetch error:", error);
@@ -25,7 +25,7 @@ async function getPost(id) {
         cache: "no-store",
       }
     );
-    const post = await res.json(); // Parse the response JSON
+    const post = await res.json();
     return post;
   } catch (error) {
     console.error("Fetch error:", error);
@@ -36,13 +36,12 @@ async function getPost(id) {
 const Post = async ({ params }) => {
   const data = await getData(params.id);
 
-  // Check if data exists before accessing its properties
+  
   if (!data) {
     return <div>Error loading data</div>;
   }
   const post = await getPost(params.id);
 
-  // Check if data exists before accessing its properties
   if (!data) {
     return <div>Error loading data</div>;
   }
