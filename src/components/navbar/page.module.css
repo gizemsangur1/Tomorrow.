@@ -23,6 +23,10 @@
     font-size: 16px;
 }
 
+.navitems2{
+    font-size: 24px;
+}
+
 .navitem:active{
     font-weight: bold;
 }
