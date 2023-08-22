@@ -50,6 +50,8 @@
     height: 100%;
     border: 5px solid white;
     border-top-left-radius: 25px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -90,7 +92,7 @@
     color: white;
 }
 .photo2{
-    
+    display: grid;
     margin: 10px;
     padding: 10px;
     height: 90%;
@@ -117,7 +119,7 @@
 
 .heading{
     color: white;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 .heading3{
@@ -163,23 +165,23 @@
 .icon1{
     background-image: url("man.jpg");
     background-size: cover;
-    width:2vw;
-    height: 2vw;
+    width:  3vw;
+    height: 3vw;
     border-radius: 50%;
 }
 .icon2{
     background-image: url("man2.jpg");
     background-size: cover;
     background-color: white;
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height:3vw;
     border-radius: 50%;
 }
 .icon3{
     background-image: url("woman.jpg");
     background-size: cover;
     background-color: white;
-    width: 2vw;
-    height: 2vw;
+    width: 3vw;
+    height:3vw;
     border-radius: 50%;
 }

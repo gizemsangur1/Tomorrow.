@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { BsArrowRight } from "react-icons/bs";
 import { Grid, Typography } from "@mui/material";
 const Parts = () => {
+ 
   return (
     <Grid container className={styles.container}>
       <Grid container direction="row" className={styles.row}>
@@ -29,10 +30,10 @@ const Parts = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item md={6} sm={12} xs={12}>
+        <Grid item md={6} sm={12} xs={12} sx={{display:{md:"grid",sm:"none",xs:"none"}}}>
           <Grid className={styles.ball} ></Grid>
-          <Grid container>
-            <Grid item sm={6} xs={12} sx={{ padding: "12px" }}>
+          <Grid container >
+            <Grid item md={6} sm={12} xs={12} sx={{ padding: "12px"}} >
               <Typography className={styles.heading}>What we do</Typography>
               <Typography sx={{ fontSize: "24px", color: "white" }}>
                 6 Service
@@ -41,7 +42,7 @@ const Parts = () => {
                 sx={{ width: "90%", border: "1px solid white", height: 0 }}
               ></Grid>
             </Grid>
-            <Grid item sm={6} xs={12} sx={{ padding: "12px",display:{md:"inline",sm:"inline",xs:"none"} }}>
+            <Grid item md={6} sm={12} xs={12} sx={{ padding: "12px"}}>
               <Grid container spacing={1}>
                 <Grid item>
                   <button className={styles.buttonservice}>
@@ -75,7 +76,7 @@ const Parts = () => {
         </Grid>
       </Grid>
       <Grid container direction="row" className={styles.row}>
-        <Grid className={styles.ball} sx={{display:{md:"inline",sm:"none"}}}></Grid>
+        <Grid className={styles.ball} sx={{display:{md:"inline",sm:"none",xs:"none"}}}></Grid>
         <Grid
           item
           md={9}
@@ -83,23 +84,24 @@ const Parts = () => {
           xs={12}
           sx={{ position: "relative", alignItems: "end", display: "grid",padding:"2vw" }}
         >
-          <Grid>
+          <Grid >
             <Typography
               sx={{
-                fontSize: "2vw",
-                color: "grey",
+                fontSize: "24px",
+                color: {md:"grey",sm:"white",xs:"white"},
                 fontStyle: "italic",
                 fontWeight: "bold",
+                textAlign:{md:"start",sm:"center",xs:"center"}
               }}
             >
               Tomorrow.
             </Typography>
-            <Typography sx={{ fontSize: "3vw", color: "white" }}>
+            <Typography sx={{ fontSize: "24px", color: "white" ,textAlign:{md:"start",sm:"center",xs:"center"}}}>
               We are a solution from the <br /> future innovation
             </Typography>
           </Grid>
 
-          <Grid className={styles.ball2} ></Grid>
+          <Grid className={styles.ball2}  sx={{display:{md:"inline",sm:"none",xs:"none"}}} ></Grid>
         </Grid>
         <Grid item md={3} sm={12} xs={12}>
           <Grid
@@ -108,20 +110,21 @@ const Parts = () => {
             className={styles.row1}
             sx={{ position: "relative" }}
           >
-            <Grid className={styles.ball2}></Grid>
+            <Grid className={styles.ball2} ></Grid>
           </Grid>
           <Grid container direction="row" className={styles.row2}>
             <Grid className={styles.itemf}>
              <Grid className={styles.photo2}>
                 <Grid
                   sx={{
+                    display:"grid",
                     justifyContent: "center",
                     alignItems: "center",
                     textAlign: "start",
                     padding: "12px",
                   }}
                 >
-                  <Grid container sx={{ justifyContent: "space-between" }}>
+                  <Grid container sx={{ justifyContent: "space-between",alignItems:"center" ,margin:"5px"}}>
                     <Grid item>
                       <Typography className={styles.heading3}>
                         Careers
@@ -137,18 +140,12 @@ const Parts = () => {
                       <Grid className={styles.icon3}></Grid>
                     </Grid>
                   </Grid>
-                  <Typography className={styles.heading3}>
-                    Empowering Vision,
-                  </Typography>
-                  <Typography className={styles.heading3}>
-                    Igniting Digital Spirits,
-                  </Typography>
-                  <Typography className={styles.heading3}>
-                    Tomorrow and Beyond!
-                  </Typography>
-                  <button className={styles.buttonjoin}>
+                  <Grid container sx={{ justifyContent: "center",alignItems:"center" ,margin:"5px"}}>
+                    <button className={styles.buttonjoin}>
                     Join Us at Tomorrow Digital
                   </button>
+                  </Grid>
+                  
                 </Grid>
               </Grid>
             </Grid>
